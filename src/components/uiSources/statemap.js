@@ -1,10 +1,7 @@
 import React, {Component} from "react";
 import path from 'path';
-import panAndZoomHoc from 'react-pan-and-zoom-hoc';
-import '../shades/scss/report.scss';
-import '../shades/css/mapofnigeria.css';
-
-
+import '../../scss/report.scss';
+import '../../css/mapofnigeria.css';
 
 
 class Statemap extends React.Component { 

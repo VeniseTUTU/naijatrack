@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import path from 'path';
 import { VictoryBar, VictoryChart, VictoryAxis, VictoryTheme, VictoryTooltip, VictoryVoronoiContainer } from "victory";
 import { NavLink, Link } from 'react-router-dom';
 

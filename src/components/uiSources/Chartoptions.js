@@ -1,13 +1,15 @@
 import React, {Component} from "react";
-import path from 'path';
-import '../shades/scss/chartoptions.scss';
-import Barchart from './Barchart';
-import Linechart from './Linechart';
-import Polarchart from './Polarchart';
 import Picky from 'react-picky';
 import 'react-picky/dist/picky.css'; 
 import { NavLink, Link } from 'react-router-dom';
-const BASE_URL = process.env.USE_BASE_URL;
+import '../../scss/chartoptions.scss';
+import Barchart from '../uiSources/Barchart';
+import Linechart from '../uiSources/Linechart';
+import Polarchart from '../uiSources/Polarchart';
+
+const BASE_URL = process.env.NODE_ENV === 'development' 
+		? process.env.USE_BASE_URL_ENV
+		: process.env.USE_BASE_URL;
 
 class Chartoptions extends React.Component {
         constructor(props){

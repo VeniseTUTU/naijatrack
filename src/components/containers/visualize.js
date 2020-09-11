@@ -1,12 +1,12 @@
 import React, {Component} from "react";
 import {Helmet} from "react-helmet";
 import AOS from 'aos';
-import 'aos/dist/aos.css';
-import '../shades/scss/visualize.scss';
-import path from 'path';
-import Header from './header';
+import '../../dist/aos.css';
+import '../../scss/visualize.scss';
 import { NavLink, Link } from 'react-router-dom';
-const BASE_URL = process.env.USE_BASE_URL;
+const BASE_URL = process.env.NODE_ENV === 'development' 
+		? process.env.USE_BASE_URL_ENV
+		: process.env.USE_BASE_URL;
 
 class Visualize extends React.Component {
         constructor(props){
@@ -274,8 +274,7 @@ $('#collapeseSDG17-tg19').collapsible();
 <meta name="description" content="Visualize SDGs data in charts on the 17 goals, 169 targets, and 232 indicators in all 54 African countries." />
 <meta name="keywords" content="SDG, SDGs, Visualize, SDGs Data, 54 Countries in Africa, 169 targets, indicators, line chart, bar chart, polar chart, Cafsed data, Cafsed " />
 </Helmet>    
-	<Header />  
-
+	
 	<div className="mobPadding" style={{marginTop:'40px'}}> </div>
 <div className="VishCav">
   Pick a goal to visualize..
@@ -3135,7 +3134,7 @@ newhdHB5WQ8fGf1v0f9tFnhX0gx6Cbishi1Oe8b/w7cLXanSD+08qB6KH85ueOqp/Gsi/xf0/48j
 			    <a href="/playground/inequalities_indi8">
 			      <li> Number of countries with migration policies that facilitate orderly, safe,
 			       regular and responsible migration and mobility of people | Number</li> 
-			    </a>>   
+			    </a>   
 			</ul>
 		   </div>
             </div>

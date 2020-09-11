@@ -1,11 +1,12 @@
 import React, {Component} from "react";
 import {Helmet} from "react-helmet";
 import _ from 'underscore';
-import Header from './header';
-import Indicators from './indicators';
-import Chartoptions from './Chartoptions';
-import '../shades/scss/playground.scss';
-const BASE_URL = process.env.USE_BASE_URL;
+import Indicators from '../uiSources/indicators';
+import Chartoptions from '../uiSources/Chartoptions';
+import '../../scss/playground.scss';
+const BASE_URL = process.env.NODE_ENV === 'development' 
+		? process.env.USE_BASE_URL_ENV
+		: process.env.USE_BASE_URL;
 
 class Playground extends React.Component {
         constructor(props){
@@ -218,8 +219,7 @@ const bearers = _.uniq(bearer,true);
 {
 isLoaded == false && ( <div className="spinnerLoad"></div>)
 }
-     <Header /> 
-
+    
 	 <div className="mobPadding" style={{marginTop:'40px'}}> </div> 
 
 	<div className="indexPad" onClick={this._toggleHideYear}>

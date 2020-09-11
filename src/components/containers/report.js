@@ -1,19 +1,17 @@
 import React, {Component} from "react";
+import { NavLink, Link } from 'react-router-dom';
 import {Helmet} from "react-helmet";
-import path from 'path';
-import Header from './header';
-import '../shades/scss/report.scss';
-import '../shades/scss/performance.scss';
-import Category from './percategory';
-import Staterank from './staterank';
-import Statemap from './statemap';
-import Subnational from './subnational';
-import Stateperformance from './stateperformance';
-import Subnationalperformance from './subnationalperformance';
-import Methodology from './methodology';
 import Picky from 'react-picky';
 import 'react-picky/dist/picky.css'; 
-import { NavLink, Link } from 'react-router-dom';
+import '../../scss/report.scss';
+import '../../scss/performance.scss';
+import Category from '../uiSources/percategory';
+import Staterank from '../uiSources/staterank';
+import Statemap from '../uiSources/statemap';
+import Subnational from '../uiSources/subnational';
+import Stateperformance from '../uiSources/stateperformance';
+import Subnationalperformance from '../uiSources/subnationalperformance';
+import Methodology from '../uiSources/methodology';
 
 
 class Report extends React.Component { 
@@ -236,8 +234,7 @@ const {reportTab,data,regionaldata,isLoaded,getCountryData,noData} = this.state;
 {
 isLoaded == false && ( <div className="spinnerLoad"></div>)
 }
-     <Header />
-     
+         
      <div className="mobPadding" style={{marginTop:'40px'}}> </div>
      
      <section className="Bracerr">

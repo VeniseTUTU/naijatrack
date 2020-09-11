@@ -1,6 +1,5 @@
 import React, {Component} from "react";
-import path from 'path';
-import '../shades/scss/report.scss';
+import '../../scss/report.scss';
 
 
 class Staterank extends React.Component {
