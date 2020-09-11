@@ -1,0 +1,95 @@
+@charset "utf-8";
+@viewport { width: device-width; }
+/*
+Author:   Venise TUTU.
+Title:    CSS Document
+*/
+
+a:hover{text-decoration: none;}
+
+$blueLink: #009eea; $blueLink-hover: #0086c6;
+$primaryColor: rgb(32, 170, 159);
+$primaryColorSub: rgb(74, 190, 181);
+$exp3: 'Alegreya Sans', sans-serif;
+$primaryfont: 'Jura', sans-serif;
+$primaryfont2: 'Ubuntu', sans-serif;
+$primaryfont3: 'Open Sans', sans-serif;
+$primaryfont4: 'Barlow', sans-serif;
+$primaryfont5: 'Montserrat', sans-serif;
+$primaryfont6: 'Russo One', sans-serif;
+$primaryfont7: 'Palanquin', sans-serif;
+
+.prodTopp{
+   width: 100%;
+   height: 400px;
+   position: relative;
+   background: rgb(32, 170, 159) url("https://www.nw-ssclothing.com/images/bg_image.jpg") no-repeat;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+
+  &:after{
+     display:table;
+     content: '';
+     clear:both;
+   }
+   
+}
+
+.product{
+   width: 100%;
+  background-color: #fff;
+  padding: 60px 40px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  
+  @media (min-width: 200px) and (max-width:550px) {
+    padding: 60px 15px;
+  }
+    
+
+   &__Card{
+      
+      width: 24%;
+      height: 250px;
+      margin: 0 0px 30px 0;
+      
+      
+      div{
+         border: 3px solid $primaryColorSub;
+            position: relative;
+         width: 100%;
+         height: 220px;
+      }
+      img{
+         position: absolute;
+         width: 100%;
+         height: 100%;
+      }
+      h4{
+         font-size: 16px;
+         padding: 5px 5px;
+         color: rgb(73, 73, 73);
+         height: 20px;
+      }
+
+      @media (min-width: 750px) and (max-width:1100px) {
+          width: 32%;
+         height: 250px;
+      }
+      @media (min-width: 550px) and (max-width:750px) {
+          width: 32%;
+          height: 250px;
+      }
+      @media (min-width: 200px) and (max-width:550px) {
+
+         width: 49%;
+         height: 250px;
+      }
+
+      
+   }
+
+}
