@@ -1,6 +1,6 @@
 import React, {Suspense} from "react";
 import ReactDOM from 'react-dom';
-import { Route, BrowserRouter as Router } from 'react-router-dom';
+import { Route, Link, Switch, BrowserRouter as Router } from 'react-router-dom';
 
 import Loader from './components/uiSources/loading';
 

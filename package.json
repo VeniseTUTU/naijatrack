@@ -4,7 +4,7 @@
   "description": "An SDG Tracker System for Nigeria.",
   "main": "index.js",
   "keywords": [],
-    "scripts": {
+  "scripts": {
     "build": "webpack --mode production",
     "start": "webpack-dev-server --mode development"
   },

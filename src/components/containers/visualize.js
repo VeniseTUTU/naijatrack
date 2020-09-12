@@ -9,11 +9,10 @@ const BASE_URL = process.env.NODE_ENV === 'development'
 		: process.env.USE_BASE_URL;
 
 class Visualize extends React.Component {
-        constructor(props){
-            super(props);
-	    
-	   AOS.init();
-        }
+    constructor(props){
+        super(props);
+	    AOS.init();
+    }
 
 
 componentDidMount(){
@@ -1220,7 +1219,7 @@ newhdHB5WQ8fGf1v0f9tFnhX0gx6Cbishi1Oe8b/w7cLXanSD+08qB6KH85ueOqp/Gsi/xf0/48j
 </div>
    
       <div className="contTextsdg">   
-	    <p className="contTextsdg1">by CAFSED</p>
+	    <p className="contTextsdg1">NaijaTrack</p>
 	    <p className="contTextsdg2">
                for a <span> better </span> future.
 	    </p>
@@ -1239,7 +1238,7 @@ newhdHB5WQ8fGf1v0f9tFnhX0gx6Cbishi1Oe8b/w7cLXanSD+08qB6KH85ueOqp/Gsi/xf0/48j
       <div className="modal-body">
 
 			<div className="SdgIConbox">
-       <img src={`${BASE_URL}/goal_icons/goal_1.png`} />
+       <img src={`${BASE_URL}goal_icons/goal_1.png`} />
 			</div>
 
 			<div className="targgText" style={{color:'#ee0b32'}}>Targets</div>
@@ -1433,7 +1432,7 @@ newhdHB5WQ8fGf1v0f9tFnhX0gx6Cbishi1Oe8b/w7cLXanSD+08qB6KH85ueOqp/Gsi/xf0/48j
        <div className="modal-body">
 
 			 <div className="SdgIConbox">
-       <img src={`${BASE_URL}/goal_icons/goal_2.png`} />
+       <img src={`${BASE_URL}goal_icons/goal_2.png`} />
 			</div>
 
 			<div className="targgText" style={{color:'#d6a532'}}>Targets</div>
