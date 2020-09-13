@@ -206,6 +206,16 @@ const sortedStates = _.sortBy(states,'state');
 const bearer = _.pluck(data, 'bearer');
 const bearers = _.uniq(bearer,true);
 
+const getMax =(arr) =>{
+  let max = -Infinity;
+  console.log(max);
+  for(const item of arr){
+    if(item >= max) max = item;
+  }
+  return max;
+}
+const arr = [1,2,3,4,5,66,77,8,99];
+console.log(getMax(arr));
 
         return(
 
