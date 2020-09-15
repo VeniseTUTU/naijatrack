@@ -151,7 +151,7 @@ filtered.sort((a,b) => a.year - b.year);
 	return(
 <div>
 <div className="chartMenu">
-<div  className="chartMarginn">
+
 <ul className="dataOptions" >
 	     <li>
 
@@ -175,13 +175,13 @@ filtered.sort((a,b) => a.year - b.year);
 	
 	<ul className="ChartMenuPicker">
 	   <li>
-	     <img onClick={this._showLine} src={`${BASE_URL}shades/images/line.png`} />
+	     <img onClick={this._showLine} src={`${BASE_URL}images/line.png`} />
 	   </li>
 	   <li>
-	     <img onClick={this._showBar} src={`${BASE_URL}shades/images/bar.png`} />
+	     <img onClick={this._showBar} src={`${BASE_URL}images/bar.png`} />
 	   </li>
 	   <li>
-	     <img onClick={this._showPolar} src={`${BASE_URL}shades/images/polar.png`} />
+	     <img onClick={this._showPolar} src={`${BASE_URL}images/polar.png`} />
 	   </li>
 	</ul>
 	
@@ -205,7 +205,6 @@ filtered.sort((a,b) => a.year - b.year);
 	   
 	   
 	</ul>
-</div>
 </div>
 <div className="chartWrap">
 {  noStateData && (
