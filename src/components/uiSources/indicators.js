@@ -1,76 +1,63 @@
-import React, {Component} from "react";
+import React, {useEffect,useState,useRef} from "react";
 import EscapeOutside from "react-escape-outside";
 import { NavLink, Link } from 'react-router-dom'; 
 
-class Indicators extends React.Component {
-        constructor(props){
-            super(props);
+const Indicators = (props) => {
+     
 	    
-	   this.state={
-	    
-	    isOpen: false,
-	    indicatorTitle:'',
-	    
-	    };
-	    
-	    this._toggleShowGoals = this._toggleShowGoals.bind(this);
-	    this._toggleHideGoals = this._toggleHideGoals.bind(this);
-	    this.handleEscapeOutside = this.handleEscapeOutside.bind(this);
-        }
+const [isOpen, setIsOpen] = useState(false);
+const [indicatorTitle, setIndicatorTitle] = useState('');
+const [hidegoals, setHidegoals] = useState(false);
 
-_toggleShowGoals(){
-   this.setState({ isOpen: true });
+useEffect(() => {
+
+	$('#SDG1').collapsible();
+	$('#SDG2').collapsible();
+	$('#SDG3').collapsible();
+	$('#SDG4').collapsible();
+	$('#SDG5').collapsible();
+	$('#SDG6').collapsible();
+	$('#SDG7').collapsible();
+	$('#SDG8').collapsible();
+	$('#SDG9').collapsible();
+	$('#SDG10').collapsible();
+	$('#SDG11').collapsible();
+	$('#SDG12').collapsible();
+	$('#SDG13').collapsible();
+	$('#SDG14').collapsible();
+	$('#SDG15').collapsible();
+	$('#SDG16').collapsible();
+	$('#SDG17').collapsible();
+  
+  },[isOpen])
+	
+const toggleShowGoals = () => {
+	setIsOpen(true);
 
 }
-_toggleHideGoals(){
-    if (this.state.hidegoals=='true') {
-	this.setState({
-        hidegoals: 'false'
-      }); 
+const toggleHideGoals = () => {
+    if (hidegoals) {
+		setHidegoals(false);
     }
    
 }
 
-handleEscapeOutside() {
-    this.setState({ isOpen: false })
+const handleEscapeOutside = () => {
+    setIsOpen(false);
 }
 
 
-componentDidUpdate(prevProps) {
-	
-$('#SDG1').collapsible();
-$('#SDG2').collapsible();
-$('#SDG3').collapsible();
-$('#SDG4').collapsible();
-$('#SDG5').collapsible();
-$('#SDG6').collapsible();
-$('#SDG7').collapsible();
-$('#SDG8').collapsible();
-$('#SDG9').collapsible();
-$('#SDG10').collapsible();
-$('#SDG11').collapsible();
-$('#SDG12').collapsible();
-$('#SDG13').collapsible();
-$('#SDG14').collapsible();
-$('#SDG15').collapsible();
-$('#SDG16').collapsible();
-$('#SDG17').collapsible();
-  
-}
-        render(){
-const {indicatorTitle}	= this.state;
-
-	return(
-<div>
-	<div className="indicatorTitlecont" onClick={this._toggleShowGoals}>
+return(
+  <div>
+	<div className="indicatorTitlecont" onClick={toggleShowGoals}>
 	    <div className="indicatorTitle">
-		{this.props.indicatortitle}
+		{props.indicatortitle}
 	    </div>
 	</div>
 	
 	
-	{ this.state.isOpen === true && (
-	<EscapeOutside onEscapeOutside={ this.handleEscapeOutside }>
+  { isOpen && (
+	<EscapeOutside onEscapeOutside={ handleEscapeOutside }>
 	<div className="indicatorsCont">
 	    
 	    <div id="SDG1" className="collapseCont">
@@ -2574,10 +2561,10 @@ const {indicatorTitle}	= this.state;
 	</EscapeOutside>
 	)}
 	
-        </div>
-    );
-    }
+ </div>
+)
+    
 }
 
  
-module.exports = Indicators;
+export default Indicators;
