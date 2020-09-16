@@ -9,8 +9,7 @@ const ReportProvider = ({match,children}) => {
 
       const[data, setData] = useState([]);
       const[countries, setCountries] = useState([]);
-      const[regionaldata, regionaldata] = useState([]);
-      const[indicator, setIndicator] = useState({});
+      const[regionaldata, setRegionaldata] = useState([]);
       const[isLoaded, setIsLoaded] = useState(false);
       const[country, setCountry] = useState('Nigeria');
       const[noData, setNoData] = useState(false);
@@ -20,12 +19,8 @@ const ReportProvider = ({match,children}) => {
 useEffect(() => {
 
   setData(getData);
-  setIndicator(getIndicator);
-  //fetchIndicator(match.params.id);
-  //fetchCountryRecord(country);
-  //fetchStates(country);
-  setShortIndicator(match.params.id);
-
+  setRegionaldata(getRegional);
+  
   return () => {
     aboutcontroller.abort();
   }
@@ -100,7 +95,7 @@ const fetchReportData = ($country) => {
     country: $country
   };
   setIsLoaded(true);
-  FetchAPI(getReport(),post,apidata)
+  FetchAPI(getReport(),true,apidata)
   .then((result) => {
     setNoData(false);
     setIsLoaded(false);
@@ -122,7 +117,7 @@ country: bb.value
 };
 
 setIsLoaded(true);
-  FetchAPI(getReport(),post,apidata)
+  FetchAPI(getReport(),true,apidata)
   .then((result) => {
     setNoData(false);
     setIsLoaded(false);
@@ -157,7 +152,6 @@ return (
       data,
       countries,
       regionaldata,
-      indicator,
       selectMultipleOption: (value) => selectMultipleOption(value),
       showReportTab: (value) => showReportTab(value),
       
