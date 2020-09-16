@@ -8,6 +8,9 @@ export const getCountryRecord = (country,indicator) => {
 export const getStates = (country) => {
   return `/states/${country}`;
 };
+export const getAllCountries = () => {
+  return `allcountries/u`;
+};
 
 
 
