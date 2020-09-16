@@ -1,4 +1,7 @@
 const aboutcontroller = new AbortController();
+const API_URL = process.env.NODE_ENV === 'development' 
+		? process.env.API_URL_DEV
+		: process.env.API_URL;
 
 export default (url,data,post=false) => {
 
@@ -13,7 +16,7 @@ export default (url,data,post=false) => {
  };
  post ? options = {...args} : null;
 
-  return fetch(process.env.API_URL+url,{
+  return fetch(API_URL+url,{
     signal: aboutcontroller.signal,
     ...options
   }
