@@ -1,6 +1,9 @@
 import React, {useEffect,useState,useRef} from "react";
 import {withRouter,useHistory } from 'react-router-dom';
 import _ from 'underscore';
+import FetchAPI from '../../apis/FetchAPI';
+import {getIndicator,getStates,getCountryRecord} from '../../apis/endpoints';
+const aboutcontroller = new AbortController();
 
 const PlaygroundProvider = ({match,children}) => {
 
@@ -8,7 +11,7 @@ const PlaygroundProvider = ({match,children}) => {
       const[countries, setCountries] = useState([]);
       const[states, setStates] = useState([]);
       const[indicator, setIndicator] = useState({});
-      const[hideyear, setHideyear] = useState('true');
+      const[hideyear, setHideyear] = useState(true);
       const[isLoaded, setIsLoaded] = useState(false);
       const[country, setCountry] = useState('Nigeria');
       const[noData, setNoData] = useState(false);
@@ -16,163 +19,84 @@ const PlaygroundProvider = ({match,children}) => {
 
 useEffect(() => {
 
-  const indicator = match.params.id;
-  
-  fetchIndicator(indicator);
-  fetchCountryRecord(country);
-  fetchCountries();
-  fetchStates(country);
+  setData(getData);
+  setIndicator(getIndicator);
+  //fetchIndicator(match.params.id);
+  //fetchCountryRecord(country);
+  //fetchStates(country);
   setShortIndicator(match.params.id);
+
+  return () => {
+    aboutcontroller.abort();
+  }
 
 },[])
 
-
-const getData = () => {  //  set default values
-  const bars = [
-    { year: '2015', value: 120, label: '2015', country: 'Nigeria'},
-    { year: '2016', value: 150, label: '2016', country: 'Nigeria' },
-    { year: '2017', value: 75, label: '2017', country: 'Nigeria' },
-      { year: '2019', value: 62, label: '2019', country: 'Nigeria' },
-    { year: '2018', value: 60, label: '2018', country: 'Nigeria' },
-    
+const getData = [
+    { year: '2015', value: 120, label: '2015', country: 'Nigeria', bearer: 'anonymous'},
+    { year: '2016', value: 150, label: '2016', country: 'Nigeria', bearer: 'anonymous' },
+    { year: '2017', value: 75, label: '2017', country: 'Nigeria', bearer: 'anonymous' },
+    { year: '2019', value: 62, label: '2019', country: 'Nigeria', bearer: 'anonymous' },
+    { year: '2018', value: 60, label: '2018', country: 'Nigeria', bearer: 'anonymous' },
     
   ]
-  
-  return bars;
-}
+const getIndicator = {
+  indicator: "Proportion of population below the international poverty line, by sex, age, employment status and geographical location(urban/rural) | percent",
+} 
 
-const fetchCountries = () => {
-
-  fetch(process.env.API_URL+'allcountries/u', {signal: this.aboutcontroller.signal})
-      .then( (response) => {
-    if (response.ok) {
-        return response.json();
-    }else{
-        
-        throw new Error('No Data Found');
-        
-    }
-      })
-      .then(
-    (result) => {
-        this.setState({
-      countries: result.data,
-    });
-        
-    }
-      )
-      .catch((error) => {
-      this.setState({
-            countries: [],
-      
-        });
-    
-      });
-      
-  }
 
 const fetchStates = (country) =>{
 
-  fetch(process.env.API_URL+'states/'+country, {signal: this.aboutcontroller.signal})
-      .then( (response) => {
-    if (response.ok) {
-        return response.json();
-    }else{
-        
-        throw new Error('No Data Found');
-        
-    }
-      })
-      .then(
-    (result) => {
-        this.setState({
-      states: result.data,
-    });
-        
-    }
-      )
-      .catch((error) => {
-      this.setState({
-            states: [],
-      
-        });
-    
-      });
-      
+  FetchAPI(getStates(country))
+  .then((result) => {
+    setStates(result.data);
+  })
+  .catch((error) => {
+    setStates([]);
+  });
+
+}
+
+const fetchIndicator = (indicator) => {
+
+  FetchAPI(getIndicator(indicator))
+  .then((result) => {
+    const returnIndicator = result.data.reduce((a,b) => Object.assign(a,b), {});
+    setIndicator(returnIndicator);
+  })
+  .catch((error) => {
+    setIndicator([]);
+  });
+
   }
-
-  const fetchIndicator = (indicator) => {
-
-    fetch(process.env.API_URL+'oneindicator/'+indicator, {signal: this.aboutcontroller.signal})
-        .then( (response) => {
-      if (response.ok) {
-          return response.json();
-      }else{
-          
-          throw new Error('No Data Found');
-          
-      }
-        })
-        .then(
-      (result) => {
-      const returnValue = result.data.reduce((a,b) => Object.assign(a,b), {});
-          this.setState({
-        indicator: returnValue,
-      });
-          
-      }
-        )
-        .catch((error) => {
-        this.setState({
-              indicator: [],
-        
-          });
-      
-        });
-        
-    }
 
 const fetchCountryRecord = (country) => {
 
-  const indicator = this.props.match.params.id;
-  
-  fetch(process.env.API_URL+'visualize/'+country+'/'+indicator, {signal: this.aboutcontroller.signal})
-      .then( (response) => {
-    if (response.ok) {
-        return response.json();
-    }else{
-        
-        throw new Error('No Data Found');
-        
-    }
-    
-      })
-      .then(
-    (result) => {
-        this.setState({
-      data: result.data,
-      shortIndicator: indicator,
-      noData:false,
-        });
-        
-    }
-      )
-      .catch((error) => {
-      this.setState({
-            data: [],
-      noData:true
-        });
-    
-      });
-  }
+  const indicator = match.params.id;
+  FetchAPI(getCountryRecord(country,indicator))
+  .then((result) => {
+    setData(result.data);
+    setShortIndicator(indicator);
+    setNoData(false);
+     
+  })
+  .catch((error) => {
+    setData([]);
+    setNoData(true);
+  });
 
+}
+  
 const queryCountry = (e) => {
   e.preventDefault();
   const country = e.target.value;
-  fetchCountryRecord(country);
-  fetchStates(country);
-    
-  }
+  //fetchCountryRecord(country);
+  //fetchStates(country);
+}
+const toggleHideYear = (e) => {
+  e.preventDefault();
+  setHideyear(!hideyear)
+}
 
 const Input = {
     hideyear,
@@ -192,6 +116,8 @@ return (
       states: _.sortBy(states,'state'),
       indicator,
       bearers: _.uniq(bearer,true),
+      queryCountry: (e) => queryCountry(e),
+      toggleHideYear: (e) => toggleHideYear(e),
     })
 );
     
