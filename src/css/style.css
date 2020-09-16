@@ -168,15 +168,7 @@ body {
   margin: 0 auto 0 auto;
   width: 50%; }
 
-.dataOptions {
-  float: left;
-  font-family: "Open Sans", sans-serif;
-  cursor: pointer; }
-  .dataOptions li {
-    float: left;
-    width: 110px;
-    padding-right: 10px;
-    color: #707070; }
+
 
 .stratifier {
   position: absolute;
