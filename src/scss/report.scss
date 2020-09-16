@@ -35,6 +35,57 @@ $Beginners:red;
   clear: both;
   content: ''; 
 }
+
+
+
+.ReportTopStrip{
+
+   display: flex;
+   flex-flow: row nowrap;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0 0px;
+   margin-top: 10px;
+ 
+ &__Back{
+   font-size: 14px;
+   width: 50px;
+   text-align: right;
+ }
+ 
+ &__ReportButton{
+   border:none;
+   border-radius: 5px;
+   background-color: $blueLink;
+   padding: 5px 8px;
+   color: #fff;
+   font-size: 14px;
+   width: 100px;
+   height: 35px;
+   text-align: center;
+ }
+ 
+ &__locationBoxCont{
+   width: 200px;
+   border: 3px solid #d7d7d7;
+   padding:3px;
+   height: 40px;
+   font-size: 18px;
+   font-family: $primaryfont3;
+   
+   @media (min-width: 200px) and (max-width:470px){
+     width: 150px;
+   }
+
+   
+   
+ 
+   
+ }
+ 
+ }
+
+
 .TitleMcon{
    width: 100%;
 }
@@ -437,15 +488,7 @@ $Beginners:red;
    background-color: #fff;
    text-align: center;
 }
-.selecTContry{
-   width: 400px;
-   border: 3px solid #d7d7d7;
-   padding:3px;
-   margin: 40px 0 0 0;
-   height: 40px;
-   font-size: 18px;
-   font-family: $primaryfont3;
-}
+
 .cuspicky{
    color:#6b6b6b;
    background-color: #fff;
@@ -526,8 +569,6 @@ $Beginners:red;
    width: 100%;
    
 }
-.selecTContry{
-   width: 100%;
-}
+
 
 }
