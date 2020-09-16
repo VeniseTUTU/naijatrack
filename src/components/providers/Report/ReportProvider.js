@@ -14,7 +14,7 @@ const ReportProvider = ({match,children}) => {
       const[country, setCountry] = useState('Nigeria');
       const[noData, setNoData] = useState(false);
       const[reportTab, setReportTab] = useState('Ranking');
-
+      const[disclaimer, setDisclaimer] = useState(true);
       
 useEffect(() => {
 
@@ -130,8 +130,9 @@ setIsLoaded(true);
   });
 }
 
-
-  
+const toggleDisclaimer = () => {
+  setDisclaimer(!disclaimer)
+}
 
 const showReportTab = (value) => {
   setReportTab(value)
@@ -141,7 +142,8 @@ const Input = {
     isLoaded,
     country,
     noData,
-    reportTab
+    reportTab,
+    disclaimer
   }
 data.sort((a,b) => a.year - b.year); 
 const bearer = _.pluck(data, 'bearer');
@@ -154,7 +156,7 @@ return (
       regionaldata,
       selectMultipleOption: (value) => selectMultipleOption(value),
       showReportTab: (value) => showReportTab(value),
-      
+      toggleDisclaimer: () => toggleDisclaimer(),
     })
 );
     
