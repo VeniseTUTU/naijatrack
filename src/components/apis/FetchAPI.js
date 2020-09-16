@@ -3,7 +3,7 @@ const API_URL = process.env.NODE_ENV === 'development'
 		? process.env.API_URL_DEV
 		: process.env.API_URL;
 
-export default (url,data,post=false) => {
+export default (url,post=false,data,) => {
 
  let options;
  const args = {
