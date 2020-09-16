@@ -26,24 +26,35 @@ const Report = (props) => {
 <meta name="keywords" content="SDG, SDGs, tracking, Cafsed data, Cafsed, tracking tool, traffic lights chart, performance, achieve, prioritize, visualize, SDGs Data, report, 169 targets, indicators, line chart, bar chart, polar, SDG for a better future, SDG Goals chart, global goals " />
 </Helmet>  
 <ReportProvider>
-  {({Input,data,countries,regionaldata,indicator,showReportTab,selectMultipleOption}) => ( 
+  {({Input,data,countries,regionaldata,showReportTab,selectMultipleOption}) => ( 
  <>     
-<div className="mobPadding" style={{marginTop:'40px'}}> </div>
 
 <section className="Bracerr">
-       
- <div className="selecTContry">
-  <Picky
-    className='cuspicky'
-    options={countries}
-    value={Input.country}
-    onChange={selectMultipleOption}
-    valueKey="value"
-    labelKey="label"
-    includeFilter={true}
-    
-  />
-       </div>
+
+<div className="ReportTopStrip">
+    <div className="ReportTopStrip__Back">
+	<Link to="/visualize">   &laquo; Back </Link>
+	</div>
+
+	<div className="ReportTopStrip__locationBoxCont">
+    <Picky
+      className='cuspicky'
+      options={countries}
+      value={Input.country}
+      onChange={selectMultipleOption}
+      valueKey="value"
+      labelKey="label"
+      includeFilter={true}
+      
+    />
+  </div>
+	<Link to="/playground/poverty_indi1"> 
+	<button className="ReportTopStrip__ReportButton">
+      See Data
+	</button>
+	</Link>
+</div>
+
        <div className="emptyDat" >
   {  Input.noData && (
        <div className="noDataRep">
