@@ -9,10 +9,10 @@ export const getStates = (country) => {
   return `/states/${country}`;
 };
 export const getAllCountries = () => {
-  return `allcountries/u`;
+  return `/allcountries/u`;
 };
 export const getReport = () => {
-  return `report/u`;
+  return `/report/u`;
 };
 
 
