@@ -26,20 +26,24 @@ const Report = (props) => {
 <meta name="keywords" content="SDG, SDGs, tracking, Cafsed data, Cafsed, tracking tool, traffic lights chart, performance, achieve, prioritize, visualize, SDGs Data, report, 169 targets, indicators, line chart, bar chart, polar, SDG for a better future, SDG Goals chart, global goals " />
 </Helmet>  
 <ReportProvider>
-  {({Input,data,countries,regionaldata,showReportTab,selectMultipleOption}) => ( 
+  {({Input,data,countries,regionaldata,showReportTab,selectMultipleOption,toggleDisclaimer}) => ( 
  <>     
 
 <section className="Bracerr">
-
+{
+Input.disclaimer &&(
 <div className="Disclaimer">
   <p>
    Disclaimer: The data used in generating this report is ONLY hypothetical and
    for presentational purposes. Therefore states ranking are not actual representation
    of their performance in achieving the SDGs.
   </p>
-  <div><span className="pe-7s-close"></span></div>
+  <div><span onClick={toggleDisclaimer} className="pe-7s-close"></span></div>
    
 </div>
+  )
+}
+
 
 <div className="ReportTopStrip">
     <div className="ReportTopStrip__Back">
