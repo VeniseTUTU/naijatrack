@@ -31,6 +31,16 @@ const Report = (props) => {
 
 <section className="Bracerr">
 
+<div className="Disclaimer">
+  <p>
+   Disclaimer: The data used in generating this report is ONLY hypothetical and
+   for presentational purposes. Therefore states ranking are not actual representation
+   of their performance in achieving the SDGs.
+  </p>
+  <div><span className="pe-7s-close"></span></div>
+   
+</div>
+
 <div className="ReportTopStrip">
     <div className="ReportTopStrip__Back">
 	<Link to="/visualize">   &laquo; Back </Link>
