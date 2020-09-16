@@ -15,7 +15,7 @@ ReactDOM.render(
    <Switch>
        <Route exact path="/" component={Home} />
        <Route  path="/visualize" component={Visualize} />
-       <Route  path="/playground" component={Playground} />
+       <Route  path="/playground/:id" component={Playground} />
        <Route  path="/report" component={Report} />
        </Switch> 
     </Router>
