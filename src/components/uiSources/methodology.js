@@ -27,34 +27,12 @@ class Methodology extends React.Component {
 	</section>
 	<div className="Bracerr">
 	<section className="methodologyCon">
-	    <h4>Criteria for Indicator Selection</h4>
-	    <p>
-	      For each SDG, we identified technically-sound quantitative indicators that met five criteria to determine inclusion in the Nigeria SDG Index and Dashboards.
-	    </p>
-	    <h5>Criteria Adopted in selecting National Indicators</h5>
-	    <ol>
-	      <li>
-	        <strong>Relevance & applicability:</strong> The indicators are relevant for monitoring achievement of the SDGs and applicable to the entire states. They allow for direct comparison of performance across states. Essentially, they allow for the definition of quantitative performance thresholds that signify SDG achievement.
-	      </li>
-	      <li>
-	        <strong>Statistical adequacy:</strong> The indicators selected represent valid and reliable measures
-	      </li>
-	      <li>
-	        Consent from respective Ministries/ Organisations.
-	      </li>
-	      <li>
-	        <strong>Data quality:</strong> Ownership of data by the data source Ministries and/ Organisations.
-	      </li>
-	      <li>
-	        <strong>Coverage:</strong> Data have to be available for at least 50% of the 36 States, including the FCT.
-	      </li>
-	    </ol>
-	    
+	    	    
 	    <h4>Computing the SDG Nigeria Index Scores</h4>
-	    <h5>The procedure for calculating the SDG Nigeria Index comprised three steps: </h5>
+	    <h5>The procedure for calculating the SDG Nigeria Index comprised 6 steps: </h5>
 	    <ol>
 	      <li>
-	        <strong>Raw data:</strong> Raw data for each of the (??) Priority Indicators were compiled for each State and at the national level.
+	        <strong>Raw data:</strong> Raw data for each of the priority Indicators were compiled for each State and at the national level.
 		</li>
 	      <li>
 	        <strong>Rescaling:</strong> Rescale the data to ensure comparability across indicators and then aggregate the indicators within and across SDGs.</li>
@@ -72,7 +50,7 @@ class Methodology extends React.Component {
 	     </li>
 	     <li>
 	        <strong> SDG index score:</strong> For each of the Goals under the SDGs, SDG Nigeria Index score was computed for each State. This was calculated as the arithmetic mean of the normalised values of all the National Indicators within the Goal. In calculating the average, equal weights were assigned to each indicator and the arithmetic mean was rounded off to the nearest whole number.
-		<p>
+		<br/>
 		 Based on the SDG Nigeria Index, States were classified into 4 categories under each of the SDGs
 		 <ol>
 		   <li>
@@ -89,13 +67,13 @@ class Methodology extends React.Component {
 		     </li>
 		    
 		</ol>
-	    </p>
+	    
 	     </li>
 	     <li>
 	        <strong>Composite SDG Nigeria Index score:</strong> Every State's composite SDG Nigeria Index score was finally computed to quantify the overall progress of the States towards the SDGs. This was calculated as the arithmetic mean of the Goal scores across 13 out of the 17 Goals. This was done by assigning equal weight to every Goal score and the arithmetic mean was rounded off to the nearest whole number.
-		<p>
+		<br/>
 		  The arithmetic mean of Goal scores were then rounded off to the nearest whole number to give the composite SDG Nigeria Index score for each State. The States were again classified into the four categories (as described above): Achiever, Top Rankers, Highliner and Beginner
-		</p>
+		
 	     </li>
 	      
 	    </ol>
