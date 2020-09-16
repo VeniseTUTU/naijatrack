@@ -133,7 +133,7 @@ $Beginners:red;
    @extend .dataCubeLeft;
    float: right;
     overflow:hidden;
-   overflow-y: scroll;
+   overflow-y: auto;
 }
 .methodologyCon{
    background-color: #fff;
