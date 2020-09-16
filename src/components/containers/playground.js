@@ -38,10 +38,11 @@ const Playground = (props) => {
 	<option value="Nigeria">Nigeria</option>
    </select>
 	</div>
-
+	<Link to="/report"> 
 	<button className="TopStrip__ReportButton">
        View Report
 	</button>
+	</Link>
 </div>
 
 <Indicators indicatortitle={`${indicator.indicator}`}/>
