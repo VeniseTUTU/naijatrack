@@ -68,12 +68,12 @@ useEffect(() => {
  ];
 
  const getRegional = [
-  { region: 'South West', value: 0, abrv: 'SW',composite: 0, goal1: 0, goal2: 0, goal3: 0, goal4: 0, goal5: 0, goal6: 0, goal7: 0, goal8: 0, goal9: 0, goal10: 0, goal11: 0, goal12: 0, goal13: 0, goal14: 0, goal15: 0, goal16: 0, goal17: 0},
-  { region: 'North East', value: 0, abrv: 'SW',composite: 0, goal1: 0, goal2: 0, goal3: 0, goal4: 0, goal5: 0, goal6: 0, goal7: 0, goal8: 0, goal9: 0, goal10: 0, goal11: 0, goal12: 0, goal13: 0, goal14: 0, goal15: 0, goal16: 0, goal17: 0},
-  { region: 'North West', value: 0, abrv: 'SW',composite: 0, goal1: 0, goal2: 0, goal3: 0, goal4: 0, goal5: 0, goal6: 0, goal7: 0, goal8: 0, goal9: 0, goal10: 0, goal11: 0, goal12: 0, goal13: 0, goal14: 0, goal15: 0, goal16: 0, goal17: 0},
-  { region: 'South East', value: 0, abrv: 'SW',composite: 0, goal1: 0, goal2: 0, goal3: 0, goal4: 0, goal5: 0, goal6: 0, goal7: 0, goal8: 0, goal9: 0, goal10: 0, goal11: 0, goal12: 0, goal13: 0, goal14: 0, goal15: 0, goal16: 0, goal17: 0},
-  { region: 'South South', value: 0, abrv: 'SW',composite: 0, goal1: 0, goal2: 0, goal3: 0, goal4: 0, goal5: 0, goal6: 0, goal7: 0, goal8: 0, goal9: 0, goal10: 0, goal11: 0, goal12: 0, goal13: 0, goal14: 0, goal15: 0, goal16: 0, goal17: 0},
-  { region: 'North Central', value: 0, abrv: 'SW',composite: 0, goal1: 0, goal2: 0, goal3: 0, goal4: 0, goal5: 0, goal6: 0, goal7: 0, goal8: 0, goal9: 0, goal10: 0, goal11: 0, goal12: 0, goal13: 0, goal14: 0, goal15: 0, goal16: 0, goal17: 0},
+  { region: 'South West', value: 66, abrv: 'SW',composite: 0, goal1: 0, goal2: 0, goal3: 0, goal4: 0, goal5: 0, goal6: 0, goal7: 0, goal8: 0, goal9: 0, goal10: 0, goal11: 0, goal12: 0, goal13: 0, goal14: 0, goal15: 0, goal16: 0, goal17: 0},
+  { region: 'North East', value: 43, abrv: 'NE',composite: 0, goal1: 0, goal2: 0, goal3: 0, goal4: 0, goal5: 0, goal6: 0, goal7: 0, goal8: 0, goal9: 0, goal10: 0, goal11: 0, goal12: 0, goal13: 0, goal14: 0, goal15: 0, goal16: 0, goal17: 0},
+  { region: 'North West', value: 34, abrv: 'NW',composite: 0, goal1: 0, goal2: 0, goal3: 0, goal4: 0, goal5: 0, goal6: 0, goal7: 0, goal8: 0, goal9: 0, goal10: 0, goal11: 0, goal12: 0, goal13: 0, goal14: 0, goal15: 0, goal16: 0, goal17: 0},
+  { region: 'South East', value: 57, abrv: 'SE',composite: 0, goal1: 0, goal2: 0, goal3: 0, goal4: 0, goal5: 0, goal6: 0, goal7: 0, goal8: 0, goal9: 0, goal10: 0, goal11: 0, goal12: 0, goal13: 0, goal14: 0, goal15: 0, goal16: 0, goal17: 0},
+  { region: 'South South', value: 52, abrv: 'SS',composite: 0, goal1: 0, goal2: 0, goal3: 0, goal4: 0, goal5: 0, goal6: 0, goal7: 0, goal8: 0, goal9: 0, goal10: 0, goal11: 0, goal12: 0, goal13: 0, goal14: 0, goal15: 0, goal16: 0, goal17: 0},
+  { region: 'North Central', value: 61, abrv: 'NC',composite: 0, goal1: 0, goal2: 0, goal3: 0, goal4: 0, goal5: 0, goal6: 0, goal7: 0, goal8: 0, goal9: 0, goal10: 0, goal11: 0, goal12: 0, goal13: 0, goal14: 0, goal15: 0, goal16: 0, goal17: 0},
      
 ]
 
