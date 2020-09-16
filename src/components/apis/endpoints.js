@@ -11,6 +11,8 @@ export const getStates = (country) => {
 export const getAllCountries = () => {
   return `allcountries/u`;
 };
-
+export const getReport = () => {
+  return `report/u`;
+};
 
 
