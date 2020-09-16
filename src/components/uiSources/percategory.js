@@ -1,7 +1,6 @@
 import React, {Component} from "react";
-import path from 'path';
 import '../../scss/report.scss';
-
+import { Scrollbars } from 'react-custom-scrollbars';
 
 class Category extends React.Component {
         constructor(props){
@@ -36,6 +35,7 @@ const Beginners = filtered.filter((row) => row.value <= 49 && !(row.value > 49) 
 
         return(
 <section className="dataCubeRight">
+  <Scrollbars autoHide>
 	    <div className="dataCubeTitle">
 	       Performance Category
 	    </div>
@@ -113,6 +113,7 @@ const Beginners = filtered.filter((row) => row.value <= 49 && !(row.value > 49) 
 		   </tbody>
 		</table>
 	    </div>
+		</Scrollbars>
 	</section>
     
     );
