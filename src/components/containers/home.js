@@ -34,14 +34,41 @@ return(
 <title>SJINET.COM</title>
 </Helmet>
 
- <div className="indexPad">
+<div className="Home__Context">
+	<div className="Home__Context__Logo">Naija<span>Track</span></div>
+	<button className="Home__Context__VisButton ">Visualize Data</button>
+	<button className="Home__Context__RepButton">Explore Report</button>
+</div>
+
+<div className="waveWrapper waveAnimation">
+  <div className="waveWrapperInner bgTop">
+    <div className="wave waveTop" style={{backgroundImage: `url('${BASE_URL}images/waves/wave-top.png')`}}>
+	
+	</div>
+  </div>
+  <div className="waveWrapperInner bgMiddle">
+    <div className="wave waveMiddle" style={{backgroundImage: `url('${BASE_URL}images/waves/wave-mid.png')`}}></div>
+  </div>
+  <div className="waveWrapperInner bgBottom">
+    <div className="wave waveBottom" style={{backgroundImage: `url('${BASE_URL}images/waves/wave-bot.png')`}}></div>
+  </div>
+</div>
+
+
+
+
+
+
+
+	{ /*
     <Link to="/visualize"> 
 	    <button>Visualize</button>
 		</Link>
     <Link to="/report"> 
 	    <button>Report</button>
 		</Link>
-  </div>
+		*/}
+ 
      
 	
 	</Fragment>
