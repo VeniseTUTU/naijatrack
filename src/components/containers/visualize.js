@@ -263,6 +263,10 @@ $('#collapeseSDG17-tg18').collapsible();
 $('#collapeseSDG17-tg19').collapsible();
   
 }
+componentWillUnmount(){
+	$('#SDG1mod').modal('hide');
+	
+}
 
         render(){
 
@@ -1249,10 +1253,10 @@ newhdHB5WQ8fGf1v0f9tFnhX0gx6Cbishi1Oe8b/w7cLXanSD+08qB6KH85ueOqp/Gsi/xf0/48j
 			<div style={{paddingLeft:'30px'}}>
 		    <h4 className="innDiText" style={{color:'#ee0b32'}}>Indicators</h4>
 		     <ul style={{borderLeft: '3px solid #ee0b32'}}>
-			<a href="/playground/poverty_indi1">
+			<Link to="/playground/poverty_indi1">
 			    <li>Proportion of population below the international poverty line, by sex, age, employment status and 
 				geographical location (urban/rural)| Percent</li>
-			    </a>
+			    </Link>
                         
 		     </ul>
 		    
