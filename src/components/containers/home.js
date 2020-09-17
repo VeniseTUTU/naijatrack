@@ -36,8 +36,12 @@ return(
 
 <div className="Home__Context">
 	<div className="Home__Context__Logo">Naija<span>Track</span></div>
+	<Link to="/visualize"> 
 	<button className="Home__Context__VisButton ">Visualize Data</button>
+	</Link>
+	<Link to="/report"> 
 	<button className="Home__Context__RepButton">Explore Report</button>
+	</Link>
 </div>
 
 <div className="waveWrapper waveAnimation">
@@ -53,25 +57,7 @@ return(
     <div className="wave waveBottom" style={{backgroundImage: `url('${BASE_URL}images/waves/wave-bot.png')`}}></div>
   </div>
 </div>
-
-
-
-
-
-
-
-	{ /*
-    <Link to="/visualize"> 
-	    <button>Visualize</button>
-		</Link>
-    <Link to="/report"> 
-	    <button>Report</button>
-		</Link>
-		*/}
- 
-     
-	
-	</Fragment>
+  </Fragment>
 			);
 		  
 		}
