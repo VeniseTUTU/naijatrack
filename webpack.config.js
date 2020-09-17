@@ -77,7 +77,7 @@ return{
     new webpack.DefinePlugin({
       //development vars
       'process.env.USE_BASE_URL_ENV': JSON.stringify('http://localhost:8080/src/'),
-      'process.env.API_URL_DEV': JSON.stringify('http://localhost:4000/graphql'),
+      'process.env.API_URL_DEV': JSON.stringify('http://127.0.0.1/api'),
       
       //production vars
       'process.env.USE_BASE_URL': JSON.stringify('http://www.naijatrack.com.s3-website-us-east-1.amazonaws.com/src/'),

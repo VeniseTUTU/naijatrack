@@ -11,7 +11,20 @@ AOS.init();
 
 const Home = () => {
 
-const [overlayLoginForm,setOverlayLoginForm] = useState(false); 
+const nameValue = (arr) => {
+const nameVal = [];
+for(let i=1; i<=arr.length; i++){
+  const alphabets = 'abcdefghijklmnopqrstuvwxyz'.split('');
+  const resultArr = arr[i - 1].split('');
+  console.log(resultArr);
+  const res = resultArr.map(result => alphabets.indexOf(result) + 1)
+  .reduce((a,b) => a+b) * i;
+ nameVal.push(res);
+}
+return nameVal;
+}
+const arr = ['abc','abcabc']; //[6,24]
+//console.log(nameValue(arr));
 
 return(
 
