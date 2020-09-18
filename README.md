@@ -1,4 +1,5 @@
 # 📦 Description
+A React based SDGs tracking system. The tracker collects available data for all 36 states in Nigeria to assess where each state stands yearly with regard to achieving the SDGs. The SDG index ranks states based on their performances across the 17 goals.
 
 ## Screenshots
 
