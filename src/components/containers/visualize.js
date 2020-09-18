@@ -1221,14 +1221,14 @@ newhdHB5WQ8fGf1v0f9tFnhX0gx6Cbishi1Oe8b/w7cLXanSD+08qB6KH85ueOqp/Gsi/xf0/48j
  </g>
 </svg>
 </div>
-   
+   <Link to='/'>
       <div className="contTextsdg">   
 	    <p className="contTextsdg1">NaijaTrack</p>
 	    <p className="contTextsdg2">
                for a <span> better </span> future.
 	    </p>
       </div>
-      
+</Link>      
       
       <div className="modal fade refine" id="SDG1mod" tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div className="modal-dialog modal-dialog-centered" role="document">

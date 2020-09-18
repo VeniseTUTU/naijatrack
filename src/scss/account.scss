@@ -1,23 +1,10 @@
 @charset "utf-8";
 @viewport { width: device-width; }
+@import "../stylesDef/index";
 /*
 Author:   Venise TUTU.
 Title:    CSS Document
 */
-
-
-
-
-$primaryfont1: 'Open Sans', sans-serif;
-$exp3: 'Alegreya Sans', sans-serif;
-$blueLink: #009eea; $blueLink-hover: #0086c6;
-;
-$Achievers: #00b300;
-$Toprankers: #ffff06;
-$Highliners: #ff860d;
-$Beginners:red;
-
-
 
 .accTopStrip{
   width: 100%;
@@ -208,7 +195,7 @@ $Beginners:red;
       margin-right: 10px;
       font-size: 16px;
       font-weight: bold;
-      font-family: $exp3;
+      font-family: $primaryfont1;
     }
     p{
       float: left;

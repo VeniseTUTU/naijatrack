@@ -1,23 +1,11 @@
 @charset "utf-8";
 @viewport { width: device-width; }
-/*
-Author:   Venise TUTU.
-Title:    CSS Document
-*/
-
-$primaryfont1: 'Open Sans', sans-serif;
-$exp1: 'Russo One', sans-serif;
-$exp2: 'Barlow', sans-serif;
-$exp3: 'Alegreya Sans', sans-serif;
-$exp4: 'Palanquin', sans-serif;
-
-
-$primarycolor: #ff8000;
+@import "../stylesDef/index";
 
 .refine{
   h4,p,h1, h2, h3, h5, h6{
     text-align: left;
-    font-family: inherit;
+    font-family: $primaryfont1;
     cursor:pointer;
   }
 }
@@ -29,7 +17,7 @@ $primarycolor: #ff8000;
   
   color: #fff;
   background-color: #004284; 
-  font-family: 'Montserrat', sans-serif;
+  font-family: $primaryfont1;
   font-size: 12px;
 }
 #bnn{
@@ -60,7 +48,7 @@ $primarycolor: #ff8000;
 .contTextsdg1{
     font-size: 20px;
     margin-top: 20px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: $primaryfont1;
     color: #b3b5b8;
 }
 .contTextsdg span{
@@ -109,7 +97,7 @@ $primarycolor: #ff8000;
 .dissgTitle{
   font-size: 25px;
   float: left;
-  font-family: 'Montserrat', sans-serif;
+  font-family: $primaryfont1;
 }
 .visSdg{
   color: #646464;
@@ -142,7 +130,7 @@ $primarycolor: #ff8000;
 .liNks li{
   float: left;
   padding: 0px 10px;
-  font-family: 'Jura', sans-serif;
+  font-family: $primaryfont1;
   cursor: pointer;
 }
 .liNks li{
@@ -253,7 +241,7 @@ $primarycolor: #ff8000;
   left: 50px;
   font-size: 20px;
   color: rgb(85, 84, 84);
-  font-family: 'Montserrat', sans-serif;
+  font-family: $primaryfont1;
 }
 .SdgIConbox{
   width: 50px;
@@ -266,18 +254,18 @@ $primarycolor: #ff8000;
   }
 }
 .targgText{
-  font-family: $exp2;
+  font-family: $primaryfont1;
   font-size: 14px;
   font-weight: bold;
   margin: 10px 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: $primaryfont1;
 }
 .innDiText{
-  font-family: $exp2;
+  font-family: $primaryfont1;
   font-size: 14px;
   font-weight: bold;
   margin: 10px 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: $primaryfont1;
 }
 
 

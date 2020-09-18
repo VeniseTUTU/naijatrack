@@ -1,35 +1,6 @@
 @charset "utf-8";
 @viewport { width: device-width; }
-/*
-Author:   Venise TUTU.
-Title:    CSS Document
-*/
-
-
-
-$primaryfont: 'Jura', sans-serif;
-$primaryfont2: 'Ubuntu', sans-serif;
-$primaryfont3: 'Open Sans', sans-serif;
-$exp1: 'Russo One', sans-serif;
-$exp2: 'Barlow', sans-serif;
-$exp3: 'Alegreya Sans', sans-serif;
-$exp4: 'Palanquin', sans-serif;
-
-
-$primarycolor: #ff8000;
-$primarycolor2: #ff8000; $primarycolor2-hover: #ff8c1a; $primarycolor2-hover2: #ffa346;
-$primarycolor3:#00557d; $primarycolor3-hover: #0073aa;
-$primarycolor3: #1a8cff; $primarycolor2-hover: #ff8c1a;
-$subwhite: #e6e6e6;
-$subwhite2: #c5c5c5;
-$grey: #f8f8f8;
-$blueLink: #009eea; $blueLink-hover: #0086c6;
-
-$Achievers: #00b300;
-$Toprankers: #ffff06;
-$Highliners: #ff860d;
-$Beginners:red;
-
+@import "../stylesDef/index";
 
 
 .TitleMcon{
@@ -51,7 +22,7 @@ $Beginners:red;
    text-align: center;
    color: #494949;
    font-weight: bold;
-   font-family: $exp3;
+   font-family: $primaryfont1;
 }
 .dataCube{
    background-color: #fff;
@@ -68,7 +39,7 @@ $Beginners:red;
 
 .dataCubeTitle{
    font-size: 16px;
-   font-family: $exp3;
+   font-family: $primaryfont1;
    font-weight: bold;
    color: #5c5c5c;
 }
@@ -98,7 +69,7 @@ $Beginners:red;
    
    table{
     
-     font-family: $primaryfont3;
+      font-family: $primaryfont1;
      overflow: auto;
      display: block;
     
@@ -295,7 +266,7 @@ $Beginners:red;
 }
 .legendCont{
    margin: 10px 0 5px 0;
-   font-family: $exp3;
+   font-family: $primaryfont1;
    color: #727272;
    
    ul{

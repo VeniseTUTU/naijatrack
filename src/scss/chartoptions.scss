@@ -1,18 +1,6 @@
 @charset "utf-8";
 @viewport { width: device-width; }
-/*
-Author:   Venise TUTU.
-Title:    CSS Document
-*/
-
-$primaryfont1: 'Open Sans', sans-serif;
-$primaryfont: 'Jura', sans-serif;
-
-
-$primarycolor: #ff8000;
-$displaycolor: #696969;
-$blueLink: #009eea; $blueLink-hover: #0086c6;
-
+@import "../stylesDef/index";
 
 .chartMenu {
   width: 100%;
@@ -103,7 +91,7 @@ $blueLink: #009eea; $blueLink-hover: #0086c6;
   white-space:nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  font-family: "Open Sans", sans-serif;
+  font-family: $primaryfont1;
 
   &:hover{
    
