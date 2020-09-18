@@ -79,7 +79,7 @@ return{
       'process.env.USE_BASE_URL_ENV': JSON.stringify('http://localhost:8080/src/'),
       'process.env.API_URL_DEV': JSON.stringify('http://127.0.0.1/api'),
       
-      //production vars
+      //production vars 
       'process.env.USE_BASE_URL': JSON.stringify('http://www.naijatrack.com.s3-website-us-east-1.amazonaws.com/src/'),
       'process.env.API_URL': JSON.stringify('https://sjinetapi-24.herokuapp.com'), 
       

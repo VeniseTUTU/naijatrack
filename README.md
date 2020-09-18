@@ -1,15 +1,18 @@
-# 📦 SJINET VOD WEB APP
+# 📦 Description
 
-## 🛠 Setup
+## Screenshots
 
-1. Install nodejs
+### Front Page
+![naijatrack_Frontpage](https://github.com/VeniseTUTU/naijatrack/blob/master/docs/images/naijtrack-home.png)
 
-## 👟 Run
-1. `npm install` (installs dependencies.)
-1. `npm start` (starts dev app)
-1. Go to [http://localhost:8080]
+### Preview
+![naijatrack_Preview](https://github.com/VeniseTUTU/naijatrack/blob/master/docs/images/naijtrack-preview.gif)
+
+### Report Screen (State Map)
+![naijatrack_statemap](https://github.com/VeniseTUTU/naijatrack/blob/master/docs/images/naijtrack-report1.png)
+
+### Report Screen (State Rank)
+![naijatrack_staterank](https://github.com/VeniseTUTU/naijatrack/blob/master/docs/images/naijtrack-report2.png)
 
 
-(Login Details)
-1. username: slypalmer15@gmail.com
-1. password: 123456789
+
